@@ -3,34 +3,248 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
-
-    <style>
-        
-    </style>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0/themes.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
     <title>Document</title>
 
 </head>
-<body>
+<body class="poppins-regular bg-base-300">
     <header>
-
-    <nav class="bg-white border-gray-200 dark:bg-gray-900">
-        <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
-            <a href="https://flowbite.com" class="flex items-center space-x-3 rtl:space-x-reverse">
-                <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Flowbite Logo" />
-                <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
-            </a>
-            <div class="flex items-center space-x-6 rtl:space-x-reverse">
-                <a href="tel:5541251234" class="text-sm  text-gray-500 dark:text-white hover:underline">(555) 412-1234</a>
-                <a href="#" class="text-sm  text-blue-600 dark:text-blue-500 hover:underline">Login</a>
+        <nav class="mx-auto w-full max-w-screen-xl py-3">
+            <div class="navbar bg-base-100 shadow-sm rounded-lg">
+                <div class="flex-1 flex items-center">
+                    <img src="assets/logo.png" alt="logo" class="h-10 w-10 cursor-pointer" />
+                    <h1 class="text-xl">Dev<span class="font-extrabold">Board</span></h1>
+                </div>
+                <div class="flex gap-6 items-center">
+                    <div class="flex gap-2">
+                        <img src="assets/checkbox.png" class="h-6 w-6" />
+                        <p>0</p>
+                    </div>
+                    <div>
+                        <label class="swap swap-rotate">
+                            <!-- this hidden checkbox controls the state -->
+                            <input type="checkbox" class="theme-controller" value="dark" />
+                        
+                            <!-- sun icon -->
+                            <img
+                            class="swap-off h-7 w-7 fill-current"
+                            src="assets/theme-btn.png"/>
+                        
+                            <!-- moon icon -->
+                            <img
+                            class="swap-on h-7 w-7 fill-current"
+                            src="assets/theme-btn.png"/>
+                        </label>
+                    </div>
+                </div>
             </div>
-        </div>
-    </nav>
-
+        </nav>
     </header>
+
+    <main class=" container mx-auto w-full max-w-screen-xl py-6">
+        <section class="grid grid-cols-1 lg:grid-cols-4 gap-6">
+
+            <div class="lg:col-span-3 bg-base-100 shadow-sm rounded-lg">
+
+                <div class="grid grid-cols-1 lg:grid-cols-4 p-6 gap-5 border-b-2 border-gray-200 border-dashed">
+
+                    <div class="flex lg:col-span-1 items-center justify-center rounded-xl bg-base-300 gap-4 p-3">
+                        <div class="flex items-center justify-center rounded-full bg-white w-10 h-10 ">
+                            <img class="w-5 " src="./assets/checkbox.png" alt="">
+                        </div>
+                        <div>
+                            <p class="text-xm">Task Assigned</p>
+                            <h2 id="task-number" class="font-bold text-xl">6</h2>
+                        </div>
+                    </div>
+
+                    <div id="blog"
+                        class="flex items-center justify-center rounded-xl cursor-pointer lg:col-span-2 bg-gradient-to-r from-blue-700 via-indigo-500 to-indigo-300 gap-6 p-3">
+                        <div>
+                            <img src="./assets/board.png" alt="">
+                        </div>
+                        <div>
+                            <p class="text-white text-xl">Discover Something <br> New Today!</p>
+                        </div>
+                    </div>
+
+                    <div class="flex lg:col-span-1 items-center justify-center rounded-xl bg-base-300 gap-4 p-3">
+                        <div class="flex items-center justify-center rounded-full bg-white w-10 h-10 ">
+                            <img class="w-5 " src="./assets/calender.png" alt="">
+                        </div>
+                        <div>
+                            <p id="day-name" class="text-2xl"></p>
+                            <h2 id="date-name" class="font-bold text-[16px]"></h2>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 p-6">
+
+                    <div class="lg:w-72 bg-base-200 rounded-xl p-3">
+                        <div class="space-y-3 border-b-2 border-gray-200 border-dashed mt-2 pb-4">
+                            <a class=" p-2 rounded-md text-xs border-none bg-base-100">ShopEase</a>
+                            <h1 id="title-1" class="mt-2 text-xl font-medium">Fix Mobile Button Issue </h1>
+                            <p class="bg-base-100 text-xs text-gray-400 p-2 rounded-xl">If your mobile button isn’t
+                                working, check for CSS issues like z-index or touch-action: manipulation;. Ensure
+                                JavaScript handles touchstart events and include the viewport meta tag. Use DevTools to
+                                debug overlaps or errors.</p>
+                        </div>
+                        <div class="flex items-center justify-center gap-6 lg:gap-3 mt-3 ">
+                            <div>
+                                <p class="text-xs text-gray-600">Deadline</p>
+                                <h4 class="text-sm font-medium">21 March 2025</h4>
+                            </div>
+
+                            <div>
+                                <a id="complate-btn-1"
+                                    class=" btn  bg-blue-700 text-white">Completed</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lg:w-72 bg-base-200 rounded-xl p-3">
+                        <div class="space-y-3 border-b-2 border-gray-200 border-dashed mt-2 pb-4">
+                            <a class=" p-2 rounded-md text-xs border-none bg-base-100">CloudSync</a>
+                            <h1 id="title-2" class="mt-2 text-xl font-medium">Add Dark Mode</h1>
+                            <p class="bg-base-100 text-xs text-gray-400 p-2 rounded-xl">To add dark mode, create a
+                                toggle button and apply a .dark-mode class to the
+
+                                <body> using JavaScript. Define dark mode styles in CSS, like changing the background
+                                    and text colors. Use classList.toggle() in JavaScript.
+                            </p>
+                        </div>
+                        <div class="flex items-center justify-center gap-6 lg:gap- mt-3 ">
+                            <div>
+                                <p class="text-xs text-gray-600">Deadline</p>
+                                <h4 class="text-sm font-medium">12 February 2025</h4>
+                            </div>
+
+                            <div>
+                                <a id="complate-btn-2" class=" btn bg-blue-700 text-white ">Completed</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lg:w-72 bg-base-200 rounded-xl p-3">
+                        <div class="space-y-3 border-b-2 border-gray-200 border-dashed mt-2 pb-4">
+                            <a class=" p-2 rounded-md text-xs border-none bg-base-100">SwiftPay</a>
+                            <h1 id="title-3" class="mt-2 text-xl font-medium">Optimize Home page</h1>
+                            <p class="bg-base-100 text-xs text-gray-400 p-2 rounded-xl">To optimize your homepage,
+                                improve loading speed by compressing images and using lazy loading. Minimize CSS and
+                                JavaScript, enable caching, and use a CDN. Ensure a clean, mobile-friendly design with
+                                fast navigation.</p>
+                        </div>
+                        <div class="flex items-center justify-center gap-6 lg:gap- mt-3 ">
+                            <div>
+                                <p class="text-xs text-gray-600">Deadline</p>
+                                <h4 class="text-sm font-medium">27 February 2025</h4>
+                            </div>
+
+                            <div>
+                                <a id="complate-btn-3" class="btn bg-blue-700 text-white ">Completed</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lg:w-72 bg-base-200 rounded-xl p-3">
+                        <div class="space-y-3 border-b-2 border-gray-200 border-dashed mt-2 pb-4">
+                            <a class=" p-2 rounded-md text-xs border-none bg-base-100">Meta</a>
+                            <h1 id="title-4" class="mt-2 text-xl font-medium">Add new emoji</h1>
+                            <p class="bg-base-100 text-xs text-gray-400 p-2 rounded-xl">To add new emojis, use Unicode
+                                characters, emoji fonts. You can also include custom emojis with CSS or JavaScript by
+                                replacing text with images. For websites, consider emoji libraries like Twemoji for
+                                better compatibility.</p>
+                        </div>
+                        <div class="flex items-center justify-center gap-6 lg:gap- mt-3 ">
+                            <div>
+                                <p class="text-xs text-gray-600">Deadline</p>
+                                <h4 class="text-sm font-medium">09 January 2025</h4>
+                            </div>
+
+                            <div>
+                                <a id="complate-btn-4" class="btn  bg-blue-700 text-white ">Completed</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lg:w-72 bg-base-200 rounded-xl p-3">
+                        <div class="space-y-3 border-b-2 border-gray-200 border-dashed mt-2 pb-4">
+                            <a class=" p-2 rounded-md text-xs border-none bg-base-100">Google LLC</a>
+                            <h1 id="title-5" class=" mt-2 text-xl font-medium">Integrate OpenAI API </h1>
+                            <p class="bg-base-100 text-xs text-gray-400 p-2 rounded-xl">To integrate the OpenAI API,
+                                sign up for an API key and use it in your backend or frontend. Make requests via fetch()
+                                in JavaScript or requests in Python. Ensure proper authentication and handle responses
+                                efficiently.</p>
+                        </div>
+                        <div class="flex items-center justify-center gap-6 lg:gap-3 mt-3 ">
+                            <div>
+                                <p class="text-xs text-gray-600">Deadline</p>
+                                <h4 class="text-sm font-medium">17 March 2025</h4>
+                            </div>
+
+                            <div>
+                                <a id="complate-btn-5" class="btn  bg-blue-700 text-white ">Completed</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lg:w-72 bg-base-200 rounded-xl p-3">
+                        <div class="space-y-3 border-b-2 border-gray-200 border-dashed mt-2 pb-4">
+                            <a class=" p-2 rounded-md text-xs border-none bg-base-100">Glassdoar</a>
+                            <h1 id="title-6" class="mt-2 text-xl font-medium">Improve Job searching </h1>
+                            <p class="bg-base-100 text-xs text-gray-400 p-2 rounded-xl">To improve job searching, use
+                                multiple platforms optimize your resume with keywords and network on LinkedIn. Set up
+                                job alerts tailor applications to each role . Stay updated with industry trends to
+                                increase your chances. </p>
+                        </div>
+                        <div class="flex items-center justify-center gap-6 lg:gap- mt-3 ">
+                            <div>
+                                <p class="text-xs text-gray-600">Deadline</p>
+                                <h4 class="text-sm font-medium">31 January 2025</h4>
+                            </div>
+
+                            <div>
+                                <a id="complate-btn-6" class="btn  bg-blue-700 text-white ">Completed</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="lg:col-span-1  bg-base-100 shadow-sm rounded-lg ">
+
+                <div class="text-center py-6 border-b-2 border-gray-200 border-dashed">
+                    <div class="flex items-center gap-2 justify-center mt-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"
+                            class="w-6 h-6 fill-current text-content"
+                        >
+                            <path d="M480-120q-138 0-240.5-91.5T122-440h82q14 104 92.5 172T480-200q117 
+                            0 198.5-81.5T760-480q0-117-81.5-198.5T480-760q-69 0-129 32t-101 88h110v80H120v-240h80v94q51-64 124.5-99T480-840q75 
+                            0 140.5 28.5t114 77q48.5 48.5 77 114T840-480q0 75-28.5 140.5t-77 114q-48.5 48.5-114 
+                            77T480-120Zm112-192L440-464v-216h80v184l128 128-56 56Z"/></svg>
+                        <p class="font-medium">Activity Log</p>
+                    </div>
+
+                    <a id="clear-btn" class="btn bg-blue-600 text-white rounded-xl py-1 mt-6 mb-2">Clear History</a>
+                </div>
+
+                <div id="add-history" class="p-6">
+
+                </div>
+            </div>
+        </section>
+    </main>
 
     <script src="utilities/utilities.js"></script>
     <script src="components/*.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>    
 </body>
 </html>
