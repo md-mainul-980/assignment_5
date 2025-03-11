@@ -1,79 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
-    <!-- tailwind -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- daisyui -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- font -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0/themes.css" rel="stylesheet" type="text/css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-    <!-- style -->
-    <link rel="stylesheet" href="/style/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Document</title>
 </head>
-
-<body class="poppins-font bg-[#F4F7FF] p-3">
-    <header class=" container mx-auto ">
-        <div class="navbar bg-white rounded-xl">
-            <div class="navbar-start">
-
-                <a class="btn btn-ghost text-xl">
-                    <img class="w-7 lg:w-10" src="./assets/logo.png" alt="">
-                    <span class="text-2xl lg:text-3xl font-normal">Dev<span class="font-bold">Board</span></span>
-                </a>
+<body class="bg-base-100 poppins-regular">
+    <header>
+        <nav class="mx-auto w-full max-w-screen-xl py-3">
+            <div class="navbar bg-base-300 shadow-sm rounded-lg">
+                <div class="flex-1 flex items-center">
+                    <img src="assets/logo.png" alt="logo" class="h-10 w-10 cursor-pointer" />
+                    <h1 class="text-xl">Dev<span class="font-extrabold">Board</span></h1>
+                </div>
+                <div class="">
+                    <button id="back-btn" class="btn btn-soft btn-info text-base-content rounded-md">Back to Desk</button>
+                </div>
             </div>
+        </nav>
+    </header>
 
-            <div class="navbar-end">
-                <a id="page" class="btn bg-[#3752FD] hover:bg-[#2643ff] text-white">Back to Desk</a>
+    <main>
+
+        <div class="mx-auto w-full max-w-screen-xl py-3">
+        
+        <h1 class="text-3xl font-bold absolute left-1/2 -translate-x-1/2">Blog</h1>
+
+        <div tabindex="0" class="collapse collapse-arrow bg-base-300 border-base-300 border mt-14 mb-2">
+            <div class="collapse-title font-semibold">Question-1: What are the different ways to select an element in the DOM?</div>
+            <div class="collapse-content font-medium">
+                In JavaScript, you can select DOM elements using methods like getElementById (for a unique ID), 
+                getElementsByClassName and getElementsByTagName (for multiple elements by class or tag), or querySelector and 
+                querySelectorAll (for flexible CSS-based selection).
             </div>
         </div>
-    </header>
-    <main class="mt-6">
-        <h2 class="text-2xl lg:text-3xl font-bold text-center">Blog</h2>
-        <div class="mt-10 space-y-5">
 
-            <div class=" bg-white p-4 rounded-lg">
-                <h3 class="text-xl lg:text-2xl font-semibold border-dashed border-b-2 border-gray-200 mb-5 pb-6">Question-1: What are the different ways to select an element in the DOM?</h3>
-                <p class="text-gray-500 text-xs lg:text-[16px]">DOM এ একটি Element নির্বাচন করার জন্য- By ID,  By Class Name,  By Tag Name,  By Query Selector,  By QuerySelectorAll এগুলো ব্যবহার করা হয়।</p> 
+        <div tabindex="0" class="collapse collapse-arrow bg-base-300 border-base-300 border mb-2">
+            <div class="collapse-title font-semibold">Question-2: What is the difference between innerHTML, innerText, and textContent?</div>
+            <div class="collapse-content font-medium">
+                innerHTML gets or sets the HTML content inside an element, 
+                interpreting tags as actual HTML, while innerText retrieves or sets only the visible text, 
+                ignoring hidden elements and extra spaces. textContent is similar to innerText but includes hidden text and 
+                treats everything as plain text without parsing HTML.
             </div>
+        </div>
 
-            <div class=" bg-white p-4 rounded-lg">
-                <h3 class="text-xl lg:text-2xl font-semibold border-dashed border-b-2 border-gray-200 mb-5 pb-6">Question-2: What is the difference between innerHTML, innerText, and textContent ?</h3>
-                <p class="text-xs lg:text-[16px] text-gray-500">innerHTML দিয়ে সাধারনত একটি Element এর ভিতরে  HTML সেট করে  এবং কোনো HTML কে পেতে গেলে innerHTML লাগে। অন্যদিকে innerText  Element এর ভিতরের মানকে রিটার্ন করে অথবা সেটও করে। যখন কোনো মানের প্রয়োজন তখন innerText ব্যবহার করা হয়। textContent এইটা সম্পর্কে ভালো জানি না।</p> 
+        <div tabindex="0" class="collapse collapse-arrow bg-base-300 border-base-300 border mb-2">
+            <div class="collapse-title font-semibold">Question-3: What is event delegation in the DOM?</div>
+            <div class="collapse-content font-medium">
+                Event delegation lets you attach a single event listener to a parent element instead of adding listeners to multiple child elements, 
+                which is useful for dynamically added elements.
             </div>
+        </div>
 
-            <div class=" bg-white p-4 rounded-lg">
-                <h3 class="text-xl lg:text-2xl font-semibold border-dashed border-b-2 border-gray-200 mb-5 pb-6">Question-3: What is event delegation in the DOM?</h3>
-                <p class="text-xs lg:text-[16px] text-gray-500">ইভেন্ট ডেলিগেশন হলো জাভাস্ক্রিপ্টের একটি কৌশল যেখানে একটি ইভেন্ট লিসেনারকে চাইল্ড এলিমেন্টে একাধিক লিসেনার যোগ করার পরিবর্তে একটি প্যারেন্ট এলিমেন্টের সাথে যুক্ত করা হয়। যেখানে ইভেন্টগুলি চাইল্ড থেকে প্যারেন্ট এলিমেন্ট হয়।</p> 
+        <div tabindex="0" class="collapse collapse-arrow bg-base-300 border-base-300 border mb-2">
+            <div class="collapse-title font-semibold">Question-4: What is event bubbling in the DOM?</div>
+            <div class="collapse-content font-medium">
+                Event bubbling happens when an event triggered on a child element propagates up through its parent elements, 
+                allowing them to handle the event too.
             </div>
+        </div>
 
-            <div class=" bg-white p-4 rounded-lg">
-                <h3 class="text-xl lg:text-2xl font-semibold border-dashed border-b-2 border-gray-200 mb-5 pb-6">Question-4: What is event bubbling in the DOM?</h3>
-                <p class="text-xs lg:text-[16px] text-gray-500">ইভেন্ট বাবলিং হল ইভেন্ট প্রচারের একটি পর্যায় যেখানে একটি ইভেন্ট টার্গেট এলিমেন্ট থেকে শুরু হয় এবং DOM এর মূল এলিমেন্টগুলির উপরে চলে যায়।</p> 
+        <div tabindex="0" class="collapse collapse-arrow bg-base-300 border-base-300 border mb-2">
+            <div class="collapse-title font-semibold">Question-5: How do you create, add, and remove elements using JavaScript?</div>
+            <div class="collapse-content font-medium">
+                To create an element, use document.createElement("tag"), to add it, use appendChild() or append(), and to remove it, use removeChild() or remove().
             </div>
-
-            <div class=" bg-white p-4 rounded-lg">
-                <h3 class="text-xl lg:text-2xl font-semibold border-dashed border-b-2 border-gray-200 mb-5 pb-6">Question-5: How do you create, add, and remove elements using JavaScript?</h3>
-                <p class="text-xs lg:text-[16px] text-gray-500">জাভাস্ক্রিপ্টে DOM API ব্যবহার করে Element create , add এবং remove করা যায়।</p> 
-            </div>
-            
+        </div>
         </div>
     </main>
+
     <script>
-        document.getElementById('page').addEventListener('click', function () {
-            window.location.href = './index.html'
+        document.getElementById("back-btn").addEventListener('click', function () {
+            window.location.href = "./index.html";
         })
     </script>
-
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>    
 </body>
-
 </html>

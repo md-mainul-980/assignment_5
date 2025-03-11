@@ -13,33 +13,33 @@
 
 </head>
 <body class="poppins-regular bg-base-300">
+    <div role="alert" id="complate-alert-1" class="hidden justify-center absolute top-0 left-1/2 -translate-x-1/2 alert alert-info alert-soft alert-vertical sm:alert-horizontal shadow-lg w-full max-w-sm rounded-lg p-4 mt-2 text-center">
+      <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-9 w-9" fill="none" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+        <span class="text-lg">You have completed the task</span>
+    </div>
+
+    <div role="alert" id="complate-alert-2" class="hidden justify-center absolute top-0 left-1/2 -translate-x-1/2 alert alert-success alert-soft alert-vertical sm:alert-horizontal shadow-lg w-full max-w-sm rounded-lg p-4 mt-2 text-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-9 w-9" fill="none" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+          <span class="text-lg">History cleared</span>
+      </div>
+
     <header>
         <nav class="mx-auto w-full max-w-screen-xl py-3">
             <div class="navbar bg-base-100 shadow-sm rounded-lg">
-                <div class="flex-1 flex items-center">
+                <div class="flex-1 flex items-center gap-1">
                     <img src="assets/logo.png" alt="logo" class="h-10 w-10 cursor-pointer" />
                     <h1 class="text-xl">Dev<span class="font-extrabold">Board</span></h1>
                 </div>
                 <div class="flex gap-6 items-center">
                     <div class="flex gap-2">
                         <img src="assets/checkbox.png" class="h-6 w-6" />
-                        <p>0</p>
+                        <p id="total-task">24</p>
                     </div>
                     <div>
-                        <label class="swap swap-rotate">
-                            <!-- this hidden checkbox controls the state -->
-                            <input type="checkbox" class="theme-controller" value="dark" />
-                        
-                            <!-- sun icon -->
-                            <img
-                            class="swap-off h-7 w-7 fill-current"
-                            src="assets/theme-btn.png"/>
-                        
-                            <!-- moon icon -->
-                            <img
-                            class="swap-on h-7 w-7 fill-current"
-                            src="assets/theme-btn.png"/>
-                        </label>
+                        <a id="theme-change" class="btn btn-link rounded-full w-12 h-12 p-2"><img class="" src="./assets/theme-btn.png"
+                            alt=""></a>
                     </div>
                 </div>
             </div>
@@ -64,7 +64,7 @@
                     </div>
 
                     <div id="blog"
-                        class="flex items-center justify-center rounded-xl cursor-pointer lg:col-span-2 bg-gradient-to-r from-blue-700 via-indigo-500 to-indigo-300 gap-6 p-3">
+                        class="flex items-center justify-center shadow-sm rounded-xl cursor-pointer lg:col-span-2 bg-gradient-to-r from-blue-700 via-indigo-500 to-indigo-300 gap-6 p-3">
                         <div>
                             <img src="./assets/board.png" alt="">
                         </div>
@@ -79,7 +79,7 @@
                         </div>
                         <div>
                             <p id="day-name" class="text-2xl"></p>
-                            <h2 id="date-name" class="font-bold text-[16px]"></h2>
+                            <h2 id="date-name" class="font-semibold text-xl"></h2>
                         </div>
                     </div>
                 </div>
@@ -102,8 +102,7 @@
                             </div>
 
                             <div>
-                                <a id="complate-btn-1"
-                                    class=" btn  bg-blue-700 text-white">Completed</a>
+                                <a id="complate-btn-1" class="btn  bg-blue-700 text-white">Completed</a>
                             </div>
                         </div>
                     </div>
@@ -155,7 +154,7 @@
                     <div class="lg:w-72 bg-base-200 rounded-xl p-3">
                         <div class="space-y-3 border-b-2 border-gray-200 border-dashed mt-2 pb-4">
                             <a class=" p-2 rounded-md text-xs border-none bg-base-100">Meta</a>
-                            <h1 id="title-4" class="mt-2 text-xl font-medium">Add new emoji</h1>
+                            <h1 id="title-4" class="mt-2 text-xl font-medium">Add new emoji 😎</h1>
                             <p class="bg-base-100 text-xs text-gray-400 p-2 rounded-xl">To add new emojis, use Unicode
                                 characters, emoji fonts. You can also include custom emojis with CSS or JavaScript by
                                 replacing text with images. For websites, consider emoji libraries like Twemoji for
@@ -244,7 +243,6 @@
     </main>
 
     <script src="utilities/utilities.js"></script>
-    <script src="components/*.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>    
 </body>
 </html>
