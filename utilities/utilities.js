@@ -22,6 +22,12 @@ function getDate() {
 }
 getDate();
 
+function allTaskCompleted(task) {
+    if (task.innerHTML === "0") {
+        alert("Congrats!!! You have completed all the current tasks")
+    }
+}
+
 document.getElementById("complate-btn-1").addEventListener('click', function() {
     
     let alerts = document.getElementById("complate-alert-1");
@@ -45,6 +51,8 @@ document.getElementById("complate-btn-1").addEventListener('click', function() {
     addHistory.innerHTML = ` <p class="text-sm bg-base-300 p-3 rounded-lg shadow-md m-4">You have Complete The Task <span class="font-semibold">Fix Mobile Button Issue</span> at ${new Date().toLocaleTimeString()}</p>
     `
     history.appendChild(addHistory);
+
+    allTaskCompleted(taskNumber);
 })
 
 document.getElementById("complate-btn-2").addEventListener('click', function() {
@@ -70,6 +78,8 @@ document.getElementById("complate-btn-2").addEventListener('click', function() {
     addHistory.innerHTML = ` <p class="text-sm bg-base-300 p-3 rounded-lg shadow-md m-4">You have Complete The Task <span class="font-semibold">Add Dark Mode</span> at ${new Date().toLocaleTimeString()}</p>
     `
     history.appendChild(addHistory);
+
+    allTaskCompleted(taskNumber);
 })
 
 document.getElementById("complate-btn-3").addEventListener('click', function() {
@@ -95,6 +105,8 @@ document.getElementById("complate-btn-3").addEventListener('click', function() {
     addHistory.innerHTML = ` <p class="text-sm bg-base-300 p-3 rounded-lg shadow-md m-4">You have Complete The Task <span class="font-semibold">Optimize Home page </span> at ${new Date().toLocaleTimeString()}</p>
     `
     history.appendChild(addHistory);
+
+    allTaskCompleted(taskNumber);
 })
 
 document.getElementById("complate-btn-4").addEventListener('click', function() {
@@ -120,6 +132,8 @@ document.getElementById("complate-btn-4").addEventListener('click', function() {
     addHistory.innerHTML = ` <p class="text-sm bg-base-300 p-3 rounded-lg shadow-md m-4">You have Complete The Task <span class="font-semibold">Add new emoji 😎</span> at ${new Date().toLocaleTimeString()}</p>
     `
     history.appendChild(addHistory);
+
+    allTaskCompleted(taskNumber);
 })
 
 document.getElementById("complate-btn-5").addEventListener('click', function() {
@@ -145,6 +159,8 @@ document.getElementById("complate-btn-5").addEventListener('click', function() {
     addHistory.innerHTML = ` <p class="text-sm bg-base-300 p-3 rounded-lg shadow-md m-4">You have Complete The Task <span class="font-semibold">Integrate OpenAI API</span> at ${new Date().toLocaleTimeString()}</p>
     `;
     history.appendChild(addHistory);
+
+    allTaskCompleted(taskNumber);
 })
 
 document.getElementById("complate-btn-6").addEventListener('click', function() {
@@ -172,6 +188,7 @@ document.getElementById("complate-btn-6").addEventListener('click', function() {
     
     history.appendChild(addHistory);
 
+    allTaskCompleted(taskNumber);
 })
 
 
@@ -194,3 +211,4 @@ document.getElementById('theme-change').addEventListener('click', function () {
 
     document.body.style.backgroundColor = randomColor;
 })
+
