@@ -9,4 +9,4 @@ DevBoard is a demo web template that allows you to create a personalized dashboa
 - Interactive components: DevBoard includes various interactive components such as buttons, forms, dropdowns, and modals. These components help users interact with the dashboard and perform tasks more efficiently.
 - Customizable options: The template allows you to customize the dashboard by adding your own content, images, and styles. You can also change the color scheme and font styles to match your preferences.
 
-![Screenshot of DevBoard](https://github.com/mainul/DevBoard/blob/master/assets/screenshot.png)
+![Screenshot of DevBoard](./assets/devboard.png)
